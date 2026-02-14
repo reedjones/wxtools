@@ -23,7 +23,7 @@ interface User {
   email: string;
 }
 
-const userSchema: TableSchema<User> = {
+const userSchema: TableSchema = {
   name: 'users',
   version: 1,
   columns: [
@@ -47,7 +47,7 @@ db.addMigration(
 await db.initialize();
 
 // Use table
-const users = db.createTable(userSchema);
+const users = db.createTable<User>(userSchema);
 await users.insert({ id: '1', name: 'John', email: 'john@example.com' });
 const allUsers = await users.find();
 ```

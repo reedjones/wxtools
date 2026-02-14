@@ -141,7 +141,7 @@ interface User {
   email: string;
 }
 
-const userSchema: TableSchema<User> = {
+const userSchema: TableSchema = {
   name: 'users',
   version: 1,
   columns: [
@@ -158,7 +158,7 @@ db.addMigration(createMigration(1, async (conn) => {
 }));
 
 await db.initialize();
-const users = db.createTable(userSchema);
+const users = db.createTable<User>(userSchema);
 ```
 
 ### Template-Based Codegen

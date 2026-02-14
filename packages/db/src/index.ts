@@ -103,7 +103,7 @@ export class Database {
   /**
    * Create a table from schema
    */
-  createTable<T>(schema: TableSchema<T>): Table<T> {
+  createTable<T>(schema: TableSchema): Table<T> {
     return new Table(schema, this);
   }
 
@@ -148,7 +148,7 @@ export class Database {
  */
 export class Table<T> {
   constructor(
-    private schema: TableSchema<T>,
+    private schema: TableSchema,
     private database: Database
   ) {}
 
