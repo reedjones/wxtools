@@ -41,7 +41,7 @@ export class RPCServer {
   async call<TInput, TOutput>(
     name: string,
     input: TInput,
-    context?: RPCContext
+    _context?: RPCContext
   ): Promise<Result<TOutput, string>> {
     const method = this.methods.get(name);
 

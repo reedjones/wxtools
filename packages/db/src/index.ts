@@ -1,9 +1,9 @@
-import type { SchemaDefinition, Result } from '@wxtools/core';
+import type { Result } from '@wxtools/core';
 
 /**
  * Database table schema
  */
-export interface TableSchema<T = any> {
+export interface TableSchema {
   name: string;
   version: number;
   columns: ColumnDefinition[];

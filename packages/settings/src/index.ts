@@ -1,4 +1,4 @@
-import type { SchemaDefinition, ValidationRule, Result } from '@wxtools/core';
+import type { ValidationRule, Result } from '@wxtools/core';
 
 /**
  * Setting field types
