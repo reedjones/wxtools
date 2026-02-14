@@ -1,0 +1,40 @@
+{
+  "name": "@wxtools/rpc",
+  "version": "0.1.0",
+  "description": "Typed RPC system for WXT browser extensions",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rm -rf dist .turbo node_modules",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "wxt",
+    "browser-extension",
+    "wxtools",
+    "rpc"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@wxtools/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.36",
+    "eslint": "^9.0.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
