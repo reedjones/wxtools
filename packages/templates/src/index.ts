@@ -33,7 +33,7 @@ export class TemplateEngine implements TemplateRenderer {
       const parts = trimmedKey.split(/\s+/);
       if (this.helpers.has(parts[0])) {
         const helper = this.helpers.get(parts[0])!;
-        const args = parts.slice(1).map((arg) => this.resolveValue(arg, data));
+        const args = parts.slice(1).map((arg: string) => this.resolveValue(arg, data));
         return String(helper(...args));
       }
 

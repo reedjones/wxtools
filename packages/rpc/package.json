@@ -17,12 +17,18 @@
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "clean": "rm -rf dist .turbo node_modules"
   },
-  "keywords": ["wxt", "browser-extension", "wxtools", "rpc"],
+  "keywords": [
+    "wxt",
+    "browser-extension",
+    "wxtools",
+    "rpc"
+  ],
   "license": "MIT",
   "dependencies": {
     "@wxtools/core": "workspace:*"
   },
   "devDependencies": {
+    "@types/chrome": "^0.1.36",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
